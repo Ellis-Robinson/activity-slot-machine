@@ -1,0 +1,10 @@
+<div>
+  <h1><%= @slot.name %></h1>
+
+  <div>
+    <% @turners.each do |turner| %>
+      <h3><%= turner.name %></h3>
+      <p><%= turner.description %></p>
+    <% end %>
+  </div>
+</div>

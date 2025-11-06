@@ -1,0 +1,11 @@
+<div>
+  <h1>Choose your slot</h1>
+  <div>
+    <% @slots.each do |slot| %>
+      <a href=<%=slot_path(slot)%>>
+        <h3><%= slot.name %></h3>
+        <p><%= slot.description %></p>
+      </a>
+    <% end %>
+  </div>
+</div>
