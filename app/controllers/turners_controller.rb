@@ -1,0 +1,2 @@
+class TurnerController < ApplicationController
+end
