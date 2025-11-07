@@ -1,6 +1,7 @@
 class TurnersController < ApplicationController
   def show
     @turner = Turner.find(params[:id])
-    @options = @turner.options
+    @turner_options = @turner.options
+    @options = Option.all
   end
 end

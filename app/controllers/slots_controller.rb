@@ -21,6 +21,10 @@ class SlotsController < ApplicationController
     end
   end
 
+  def edit
+    @slot = Slot.find(params[:id])
+  end
+
   private
 
   def slot_params
