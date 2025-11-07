@@ -2,10 +2,22 @@
   <h1><%= @slot.name %></h1>
   <p><%= @slot.description %></p>
 
+  <hr>
+
   <div>
     <% @turners.each do |turner| %>
       <h3><%= turner.name %></h3>
       <p><%= turner.description %></p>
+      <% if turner.options %>
+        <p><%= turner.options.first.name %></p>
+      <% end %>
+      <a href=<%=turner_path(turner)%>>Edit turner</a>
     <% end %>
+  </div>
+
+  <hr>
+
+  <div>
+    <%= link_to 'Home', root_path%>
   </div>
 </div>

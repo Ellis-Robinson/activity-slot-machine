@@ -1,5 +1,6 @@
 class Option < ApplicationRecord
-  has_many :turners
+  has_many :turner_options
+  has_many :turners, through: :turner_options
 
-  validates :name, :description, presnece: true
+  validates :name, :description, presence: true
 end
