@@ -1,0 +1,18 @@
+<!-- TODO 
+  - Add checkboxes for current turners
+  - Add 'remove turners' button
+-->
+<div>
+  <div>
+    <h1>EDIT</h1>
+    <h1><%= @slot.name %></h1>
+    <p><%= @slot.description %></p>
+  </div>
+
+  <hr>
+
+  <% @turners.each do |turner| %>
+    <h1><%= turner.name %></h1>
+    <p><%= turner.description %></p>
+  <% end %>
+</div>

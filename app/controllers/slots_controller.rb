@@ -23,6 +23,7 @@ class SlotsController < ApplicationController
 
   def edit
     @slot = Slot.find(params[:id])
+    @turners = @slot.turners
   end
 
   private

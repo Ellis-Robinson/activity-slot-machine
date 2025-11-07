@@ -1,3 +1,5 @@
+# TODO
+# - Add turner id to create action for the redirect
 class OptionsController < ApplicationController
   def new
     @option = Option.new()
@@ -6,8 +8,6 @@ class OptionsController < ApplicationController
   def create
     @option = Option.new(options_params)
     if @option.save
-      # TODO
-      # Change this once i can access the turner ID
       redirect_to slots_path
     else
       render :new, status: :unprocessable_entity

@@ -22,7 +22,11 @@
   <hr>
 
   <div>
-    <%= link_to 'Edit Slot', edit_slot_path(@slot) %>
+    <%= link_to 'Remove Turner', edit_slot_path(id: @slot, test_id: 2) %>
+  </div>
+
+  <div>
+    <%= link_to 'Add Turner', new_turner_path %>
   </div>
 
   <hr>
