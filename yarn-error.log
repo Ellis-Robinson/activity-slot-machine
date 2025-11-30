@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/ellisrobinson/.nvm/versions/node/v16.18.1/bin/node /Users/ellisrobinson/.yarn/bin/yarn.js add @hotwired/turbo-rails @hotwired/stimulus @hotwired/stimulus-loading
+
+PATH: 
+  /Users/ellisrobinson/.pyenv/shims:/Users/ellisrobinson/.pyenv/bin:/Users/ellisrobinson/.nvm/versions/node/v16.18.1/bin:/Applications/SnowSQL.app/Contents/MacOS:/usr/local/opt/libpq/bin:/Users/ellisrobinson/.yarn/bin:/Users/ellisrobinson/.config/yarn/global/node_modules/.bin:/Users/ellisrobinson/.rbenv/shims:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Users/ellisrobinson/.pyenv/bin:/Users/ellisrobinson/.nvm/versions/node/v16.18.1/bin:/Applications/SnowSQL.app/Contents/MacOS:/usr/local/opt/libpq/bin:/Users/ellisrobinson/.yarn/bin:/Users/ellisrobinson/.config/yarn/global/node_modules/.bin:/Users/ellisrobinson/.rbenv/shims
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@hotwired%2fstimulus-loading: Not found
+      at Request.params.callback [as _callback] (/Users/ellisrobinson/.yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/Users/ellisrobinson/.yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/Users/ellisrobinson/.yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/Users/ellisrobinson/.yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1358:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "app",
+    "private": true,
+    "scripts": {
+      "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+    },
+    "dependencies": {
+      "@hotwired/turbo-rails": "^8.0.20"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

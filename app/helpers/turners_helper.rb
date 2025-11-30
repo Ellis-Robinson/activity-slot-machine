@@ -1,2 +1,2 @@
-module TurnerHelper
+module TurnersHelper
 end

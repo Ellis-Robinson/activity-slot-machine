@@ -1,32 +1,46 @@
 <div>
-  <h1><%= @slot.name %></h1>
-  <p><%= @slot.description %></p>
+  <div class='bg-green-500 text-white p-4 rounded-xl'>
+    <h1><%= @slot.name %></h1>
+    <p><%= @slot.description %></p>
+  </div>
 
   <hr>
 
-  <div>
-    <h1>SPIN!!!</h1>
+  <div id='spin-btn' data-controller='spin'>
+    <button data-spin-target='button' data-action='click->spin#spin'>SPIN!!!</button>
   </div>
 
   <div>
-    <% @turners.each do |turner| %>
-      <h3><%= turner.name %></h3>
-      <p><%= turner.description %></p>
-      <% if turner.options %>
-        <p><%= turner.options.first.name %></p>
+      <% @turners.each do |turner| %>
+        <div class='turner'>
+          <h3><%= turner.name %></h3>
+          <p><%= turner.description %></p>
+          <div id='option-display' class='option-display'>
+            <% if turner.options %>
+              <p><%= turner.options.first.name %></p>
+              <% turner.options.each_with_index do |option, index| %>
+                <div class='option' id='turner-<%=turner.id%>-option-<%=index%>'>
+                  <p><%= option.name %></p>
+                  <p><%= option.description %></p>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+          <a href=<%=turner_path(turner)%>>Edit turner</a>
+        </div>
       <% end %>
-      <a href=<%=turner_path(turner)%>>Edit turner</a>
-    <% end %>
   </div>
 
   <hr>
 
   <div>
-    <%= link_to 'Remove Turner', edit_slot_path(id: @slot, test_id: 2) %>
-  </div>
+    <div>
+      <%= link_to 'Remove Turner', edit_slot_path(id: @slot, test_id: 2) %>
+    </div>
 
-  <div>
-    <%= link_to 'Add Turner', new_turner_path %>
+    <div>
+      <%= link_to 'Add Turner', new_turner_path %>
+    </div>
   </div>
 
   <hr>

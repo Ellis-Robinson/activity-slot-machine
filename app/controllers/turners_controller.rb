@@ -21,4 +21,13 @@ class TurnersController < ApplicationController
       render :new, staus: :unprocessable_entity
     end
   end
+
+  private
+
+  def turner_params
+    require(:turner).permit(
+      :name,
+      :description
+    )
+  end
 end
