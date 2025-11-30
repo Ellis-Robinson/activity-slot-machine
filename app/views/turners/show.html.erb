@@ -1,0 +1,31 @@
+<div>
+  <h1><%= @turner.name %></h1>
+  <p><%= @turner.description %></p>
+
+  <hr>
+</div>
+
+<div>
+  <h1>Current options</h1>
+  <div>
+    <% @turner_options.each do |option| %>
+      <p><%= option.name %></p>
+      <p><%= option.description %></p>
+      <hr>
+    <% end %>
+  </div>
+</div>
+<div>
+  <h1>Possible options</h1>
+  <div>
+    <% @options.each do |option| %>
+      <p><%= option.name %></p>
+      <p><%= option.description %></p>
+      <hr>
+    <% end %>
+  </div>
+</div>
+
+<div>
+  <a href=<%= new_option_path %>>Add an option</h1>
+</div>
